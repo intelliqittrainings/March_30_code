@@ -1,0 +1,147 @@
+Version Controlling
+========================
+This is the process of mainting multiple versions of the code.
+All the team memmbers upload their code into the version 
+controlling system.The VCS accepts the code uploads from multiple
+team members and creats one integrated project.Next time when the 
+team members download the code from the VCS they will be able to
+access the code created by the entire team.
+
+VCS's also preserve older and latest versions of the code
+so that the team members can toggle between any version based
+on requirement
+
+VCS's track who is making what kind of changes and at what time
+these changes are done
+
+VCS's are of 2 types
+1 Centralised Version Controlling
+2 Distributed Version Controlling
+
+Centralised Version Controlling
+=====================================
+Here we have a remote server where version contrlling happens,all the
+team members simply checkin their code into the remote server.
+
+Distributed Version Controlling
+====================================
+Here we have a Local Repository installed on individual team memebers
+machines where version controlling happens at the level of individual
+team member.From here the code can be uploaded into a remote server
+wehere version controlling  happens at the level of the entire team.
+
+Installing git on Windows
+=========================
+1 Open https://git-scm.com/downloa
+2 Download git for Windows
+3 Install it
+4 Once git is installed we get an application called Git bash
+  This is the command prompt of git where we can execute the git   commands
+
+Installing git on Ubuntu linux
+==================================
+1 Open terminal in a ubuntu machine
+2 Update the ap reposiotry
+  sudo apt-get update
+3 Install git
+  sudo apt-get install -y git
+
+Installing git on Redhat Linux,Centos etc
+===========================================
+1 Open terminal
+2 Update the yum repository
+  yum -y update
+3 Install git
+  yum install -y git
+
+
+Setting up username and email id globally for a specific system
+=================================================================
+ git config --global user.name "sai krishna"
+ git config --global user.email "intelliqittrainigs@gmail.com"
+
+To see the list of all the global configurations
+git config --global --list
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+

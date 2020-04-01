@@ -1,0 +1,24 @@
+1 vim dockerfile
+
+FROM ubuntu
+MAINTAINER intelliqit
+RUN apt-get update
+RUN apt-get install -y git default-jdk
+
+
+2 Create an image from the above file
+  docker build -t myubuntu .
+
+3 Check if the image is created or not
+  docker images
+
+4 Create a container from the above image and check if git and java are present
+  docker run --name u1 -it myubuntu
+  git --version
+  java -version
+
+
+
+
+
+
