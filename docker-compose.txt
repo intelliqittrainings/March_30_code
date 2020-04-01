@@ -1,0 +1,179 @@
+docker-compose up (for creating and starting services)
+docker-compose start (for starting services)
+
+docker-compose pause  (for pausing the services)
+docker-compose unpause  (for unpausing the services)
+
+docker-compose stop (for stopping the services)
+docker-compose down (for stopping and removing the services)
+
+docker-compose ps (For seeing the list of services)
+
+
+vim docker-compose.yml
+
+---
+version: '3'
+
+services:
+ mydb:
+  image: mysql:5
+  environment:
+   MYSQL_ROOT_PASSWORD: intelliqit
+
+ mywordpress:
+  image: wordpress
+  ports:
+   - 5050:80
+  links:
+   - mydb:mysql
+...
+
+To start these services
+docker-compose up
+To start these services in detached mode
+docker-compose up -d
+To stop and remove the services
+docker-compose down
+
+=======================================================
+vim docker-compose.yml
+
+---
+version: '3'
+
+services:
+ jenkinsserver:
+  image: jenkins
+  ports:
+   - 6060:8080
+
+ qaserver:
+  image: tomcat
+  ports:
+   - 7070:8080
+  links:
+   - jenkinsserver:jenkins
+
+ prodserver:
+  image: tomcat
+  ports:
+   - 8080:8080
+  links:
+   - jenkinsserver:jenkins
+---
+
+==============================================================
+
+vim lamp.yml
+---
+version: '3'
+
+services:
+ mydb:
+  image: mysql
+  environment:
+   MYSQL_ROOT_PASSWORD: intelliqit
+
+ apache:
+  image: httpd
+  ports:
+   - 9090:80
+  links:
+   - mydb:mysql
+
+ php:
+  image: php:7.1-apache
+  links:
+   - apache:httpd
+   - mydb:mysql
+
+
+To create the containers from the above file
+docker-compose -f lamp.yml up -d
+
+
+=====================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
